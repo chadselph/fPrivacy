@@ -1,0 +1,13 @@
+{
+    "name": "Social Auth Disconnect",
+    "version": "0.1",
+    "description": "Makes Facebook permissions optional.",
+    "permissions": [
+		"https://www.facebook.com"
+    ],
+    "content_scripts": [{
+        "matches": ["https://www.facebook.com/dialog/permissions.request*"],
+        "js": ["extension.js"],
+        "css": []
+    }]
+}
