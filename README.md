@@ -6,6 +6,19 @@ What does it do?
 
 OOptOut lets you opt out of Facebook permissions when the authorization dialog is popped.
 
+Suppose you want to try out a sketchy app without handing over all of your data.
+![](http://github.com/chadselph/OOptOut-Chrome-Extension/raw/master/screenshots/too%20many.png)
+
+Whoa there buddy! We just met!  Why don't we just disable a few of these...
+
+![](http://github.com/chadselph/OOptOut-Chrome-Extension/raw/master/screenshots/removing.png)
+
+And then hit "Update"
+
+![](http://github.com/chadselph/OOptOut-Chrome-Extension/raw/master/screenshots/gone.png)
+
+Phew! I feel much safer now.
+
 How Can I Use it?
 -----------------
 
