@@ -54,7 +54,7 @@
     
      function restore_perm() {
       var deleted_perm = sessionStorage.getItem("deleted_facebook_perm");
-      sessionStorage.removeItem("deleted_facebook_perm", "")
+      sessionStorage.removeItem("deleted_facebook_perm")
 
       permissions.push(deleted_perm);
       reload_page(permissions);      
