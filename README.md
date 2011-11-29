@@ -33,10 +33,18 @@ Hopefully soon-ish it will be on the Chrome web store, but for now:
 
 What needs to be done?
 ----------------------
-Mostly CSS, logo, finding a better name. Help!
-Maybe descriptions of what each permission does.
-Maybe the ability to add permissions the site isn't acually asking for.
+*  Logo, finding a better name. Help wanted!
+*  (Maybe) descriptions of what each permission does.
+*  (Maybe) ability to add permissions the site isn't acually asking for.
+*  Package up in a chrome extension.  Basically I'm waiting on the name and logo stuff before I submit it.
 
 Why do some sites break when using this plugin?
 ----------------------------------------------
 Sometimes server-side code is written without the consideration that a Facebook permission might not have been granted.  They might get a permission denied back from Facebook and not handle it gracefully.  Some sites might be more aggressive than others about checking which permissions you're missing and trying to get you to re-auth.
+
+
+Links
+-----
+* [Hacker news conversation](https://github.com/chadselph/OOptOut-Chrome-Extension)
+* [Firefox port](https://github.com/psawaya/OOptOut-Extension-Firefox)
+* [cheald](http://hackerne.ws/user?id=cheald) on hackernews found this [similar project](https://chrome.google.com/webstore/detail/mlnhcepfaddcopbeggpobodmmodilgmc) although I don't think the UI is very good; and it apparently records which permissions you chose (for a good reason: their reseach; but ironic for a "privacy" application.)  I don't know if it works, I haven't tried it.
