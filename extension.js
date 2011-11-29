@@ -36,13 +36,13 @@
             new_params.push((enc(key) + "=" + enc(parts[key])));
         }
         window.location.replace(url + "?" + new_params.join("&"));
-    }    
+    }
     
     function save_perms(permissions) {
       var id = url_params.app_id,
           prev = sessionStorage.getItem(id);
       if (prev === null) {
-        sessionStorage.setItem(id, permissions);
+        sessionStorage.setItem(id, permissions).join(",");
       }
     }
     
@@ -52,10 +52,10 @@
       reload_page(permissions);
     }
     
-     function restore_last_perm() {
+    function restore_last_perm() {
       var deleted_perm = sessionStorage.getItem("deleted_facebook_perm");
       sessionStorage.removeItem("deleted_facebook_perm")
-
+      
       permissions.push(deleted_perm);
       reload_page(permissions);      
     }
@@ -69,13 +69,14 @@
         var html = "",
             restore_last,
             restore_all,
-            frag = document.createDocumentFragment(),
+            buttons = document.createElement('div'),
             holder = document.createElement('div');
 
+        buttons.className = "buttons"
         holder.className = "social_auth_disconnect";
-            
+        
         permissions.forEach(function (perm) {
-          holder.insertAdjacentHTML('beforeEnd', '<input type=checkbox value='+perm+' id='+perm+' checked /><label for='+perm+'>'+perm+'</label>');
+          holder.insertAdjacentHTML('beforeEnd', '<label for='+perm+'><input type=checkbox value='+perm+' id='+perm+' checked />'+perm+'</label>');
         });
         
         // Add restore last removed perm link, if it exists
@@ -85,21 +86,22 @@
           
           restore_last_elem.addEventListener("click", restore_last_perm);
           restore_last_elem.textContent = "Restore Last Change";
-          frag.appendChild(restore_last_elem);
+          buttons.appendChild(restore_last_elem);
         }
         
+        // Add restore all original perms, if they exist
         restore_all = sessionStorage.getItem(url_params.app_id);
         if (restore_all) {
           var restore_all_elem = document.createElement("button");
           
           restore_all_elem.addEventListener("click", restore_all_perms);
           restore_all_elem.innerHTML = "<b>Restore All Changes </b>";
-          frag.appendChild(restore_all_elem);
+          buttons.appendChild(restore_all_elem);
         }
         
-        holder.appendChild(frag);
-        
-        holder.insertAdjacentHTML('beforeEnd', '<a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a>');
+        buttons.insertAdjacentHTML('beforeEnd', '<a target=_new href="https://www.facebook.com/settings?tab=applications">Application Settings</a>');
+
+        holder.appendChild(buttons);
         
         // put it in the pizza!
         document.body.insertBefore(holder, document.body.firstChild);
