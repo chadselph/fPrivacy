@@ -8,6 +8,6 @@
     "content_scripts": [{
         "matches": ["https://www.facebook.com/dialog/permissions.request*"],
         "js": ["extension.js"],
-        "css": []
+        "css": ["style.css"]
     }]
 }
