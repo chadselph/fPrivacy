@@ -49,14 +49,17 @@
         * Maybe find a lightweight js lib for DOM manipulation.
         * Or just use jQuery.
         */
+        
+        var holder = document.createElement('div');
+        holder.className = "SocialAuthDisconnect";
+        holder.innerHTML = "";
+        
         var permissions = get_active_permissions();
-        var html = "";
+        
         for(var p in permissions) {
             var perm = permissions[p];
-            html += '<input type="checkbox" value="'+perm+'" checked=checked name="newperms" />'+perm;
+            holder.innerHTML += '<input type="checkbox" id="'+perm+'" value="'+perm+'" checked=checked name="newperms" /><label for="'+perm+'">'+perm+'</label>';
         }
-
-        settings_link = '<div><a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a></div>';
 
         var btn = document.createElement("button");
         btn.appendChild(document.createTextNode("Update"));
@@ -68,10 +71,13 @@
             permissions = permissions.map(function(me){ return me.value;});
             reload_page(permissions);
         }
+        
+        holder.appendChild(btn);
+        
+        holder.innerHTML += '<a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a>';
+        
         // put it in the pizza!
-        document.body.insertAdjacentHTML("afterBegin", settings_link);
-        document.body.insertAdjacentElement("afterBegin", btn);
-        document.body.insertAdjacentHTML("afterBegin", html);
+        document.body.insertBefore(holder, document.body.firstChild);
     }
 
     generate_header();

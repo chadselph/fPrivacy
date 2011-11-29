@@ -29,6 +29,7 @@ Hopefully soon-ish it will be on the Chrome web store, but for now:
 *  Turn on "Developer Mode"
 *  Click "Load unpacked extension"
 *  Find the folder of your git checkout!
+*  Try it out - for example at the [Vimeo Login Page](http://vimeo.com/log_in)
 
 What needs to be done?
 ----------------------
