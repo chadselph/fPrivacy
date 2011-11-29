@@ -72,8 +72,8 @@
             buttons = document.createElement('div'),
             holder = document.createElement('div');
 
-        buttons.className = "buttons"
         holder.className = "social_auth_disconnect";
+        buttons.className = "social_auth_disconnect_buttons"
         
         permissions.forEach(function (perm) {
           holder.insertAdjacentHTML('beforeEnd', '<label for='+perm+'><input type=checkbox value='+perm+' id='+perm+' checked />'+perm+'</label>');

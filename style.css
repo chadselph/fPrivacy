@@ -11,11 +11,11 @@
     float: left;
     white-space: nowrap;
 }
-.buttons {
+.social_auth_disconnect_buttons {
   padding-top: 10px;
   clear: both;
 }
-.buttons:before {
+.social_auth_disconnect_buttons:before {
   content: "";
   clear: both;
   display: block;
