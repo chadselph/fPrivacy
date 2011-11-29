@@ -24,14 +24,17 @@ How Can I Use it?
 
 Hopefully soon-ish it will be on the Chrome web store and Safari extensions listing, but for now:
 
-*Chrome*
+__Chrome__
+
 *  Do a git clone of this repository
 *  Open up chrome to chrome://extensions
 *  Turn on "Developer Mode"
 *  Click "Load unpacked extension"
 *  Find the folder of your git checkout!
+* Try it out - for example at the [Vimeo Login Page](http://vimeo.com/log_in)
 
-*Safari*
+__Safari__
+
 * Do a git clone of this repository
 * Get a certificate from the [Safari Dev Center](http://developer.apple.com/devcenter/safari/index.action)
 * Make sure the Safari Develop menu is enabled (Safari -> Preferences -> Advancecd -> Show Develop menu in menu bar)
