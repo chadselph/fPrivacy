@@ -22,21 +22,39 @@ Phew! I feel much safer now.
 How Can I Use it?
 -----------------
 
-Hopefully soon-ish it will be on the Chrome web store, but for now:
+Hopefully soon-ish it will be on the Chrome web store and Safari extensions listing, but for now:
+
+__Chrome__
 
 *  Do a git clone of this repository
 *  Open up chrome to chrome://extensions
 *  Turn on "Developer Mode"
 *  Click "Load unpacked extension"
 *  Find the folder of your git checkout!
-*  Try it out - for example at the [Vimeo Login Page](http://vimeo.com/log_in)
+* Try it out - for example at the [Vimeo Login Page](http://vimeo.com/log_in)
+
+__Safari__
+
+* Do a git clone of this repository
+* Get a certificate from the [Safari Dev Center](http://developer.apple.com/devcenter/safari/index.action)
+* Make sure the Safari Develop menu is enabled (Safari -> Preferences -> Advancecd -> Show Develop menu in menu bar)
+* Open the Safari Extension Builder (in the Develop menu)
+* Click "New Extension" and choose a location to save your extension
+* Copy the style.css and extension.js files from your git checkout folder into the new extension folder
+* Set Access Level to "Some"
+* In Allowed Domains, enter "www.facebook.com" and check the "Include Secure Pages" checkbox
+* Add a new end script, then select extension.js from the dropdown
+* Add a new style sheet, then select style.css from the dropdown
+* Add a Whitelist URL pattern: "https://www.facebook.com/dialog/permissions.request*"
+* Click "Install"
+* Try it out - for example at the [Vimeo Login Page](http://vimeo.com/log_in)
 
 What needs to be done?
 ----------------------
 *  Logo, finding a better name. Help wanted!
 *  (Maybe) descriptions of what each permission does.
 *  (Maybe) ability to add permissions the site isn't acually asking for.
-*  Package up in a chrome extension.  Basically I'm waiting on the name and logo stuff before I submit it.
+*  Package up in Chrome and Safari extensions.  Basically I'm waiting on the name and logo stuff before I submit it.
 
 Why do some sites break when using this plugin?
 ----------------------------------------------
