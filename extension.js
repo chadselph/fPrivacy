@@ -72,12 +72,11 @@
             reload_page(permissions);
         }
         
-        holder.appendChild(btn);
-        
         holder.innerHTML += '<a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a>';
         
         // put it in the pizza!
         document.body.insertBefore(holder, document.body.firstChild);
+        holder.appendChild(btn);
     }
 
     generate_header();
