@@ -79,26 +79,30 @@
           holder.insertAdjacentHTML('beforeEnd', '<label for='+perm+'><input type=checkbox value='+perm+' id='+perm+' checked />'+perm+'</label>');
         });
         
+        function buttonFactory(content, callback) {
+          var button = document.createElement("button");
+          button.addEventListener("click", callback);
+          button.innerHTML = content;
+          return button;
+        }
+        
         // Add restore last removed perm link, if it exists
         restore_last = sessionStorage.getItem("deleted_facebook_perm");
         if (restore_last) {
-          var restore_last_elem = document.createElement("button");
-          
-          restore_last_elem.addEventListener("click", restore_last_perm);
-          restore_last_elem.textContent = "Restore Last Change";
+          var restore_last_elem = buttonFactory("Restore Last Permission", restore_last_perm)
           buttons.appendChild(restore_last_elem);
         }
         
         // Add restore all original perms, if they exist
         restore_all = sessionStorage.getItem(url_params.app_id);
         if (restore_all) {
-          var restore_all_elem = document.createElement("button");
-          
-          restore_all_elem.addEventListener("click", restore_all_perms);
-          restore_all_elem.innerHTML = "<b>Restore All Changes </b>";
+          var restore_all_elem = buttonFactory("<b>Restore All Permissions</b>", restore_all_perms)
           buttons.appendChild(restore_all_elem);
         }
         
+        var clear_all_perms = buttonFactory("Clear All Permissions", function () { reload_page([]); });
+        buttons.appendChild(clear_all_perms);
+
         buttons.insertAdjacentHTML('beforeEnd', '<a target=_new href="https://www.facebook.com/settings?tab=applications">Application Settings</a>');
 
         holder.appendChild(buttons);
