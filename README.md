@@ -45,6 +45,6 @@ Sometimes server-side code is written without the consideration that a Facebook 
 
 Links
 -----
-* [Hacker news conversation](https://github.com/chadselph/OOptOut-Chrome-Extension)
+* [Hacker News conversation](https://news.ycombinator.com/item?id=3287272)
 * [Firefox port](https://github.com/psawaya/OOptOut-Extension-Firefox)
 * [cheald](http://hackerne.ws/user?id=cheald) on hackernews found this [similar project](https://chrome.google.com/webstore/detail/mlnhcepfaddcopbeggpobodmmodilgmc) although I don't think the UI is very good; and it apparently records which permissions you chose (for a good reason: their reseach; but ironic for a "privacy" application.)  I don't know if it works, I haven't tried it.
