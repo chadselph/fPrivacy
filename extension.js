@@ -42,7 +42,7 @@
       var id = url_params.app_id,
           prev = sessionStorage.getItem(id);
       if (prev === null) {
-        sessionStorage.setItem(id, permissions).join(",");
+        sessionStorage.setItem(id, permissions.join(","));
       }
     }
     
