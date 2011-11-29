@@ -38,4 +38,4 @@ Maybe the ability to add permissions the site isn't acually asking for.
 
 Why do some sites break when using this plugin?
 ----------------------------------------------
-Sometimes server-side code is written without the consideration that a Facebook permission might not have been granted.  They might get a permission denied back from Facebook and not handle it gracefully.  Some sites might be more aggressive than others about checking which permissions you're missing and trying to get yout to re-auth.
+Sometimes server-side code is written without the consideration that a Facebook permission might not have been granted.  They might get a permission denied back from Facebook and not handle it gracefully.  Some sites might be more aggressive than others about checking which permissions you're missing and trying to get you to re-auth.
