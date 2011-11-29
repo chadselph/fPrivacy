@@ -1,0 +1,28 @@
+.social_auth_disconnect {
+    background: -webkit-linear-gradient(#89a, #567);
+    border: 1px solid #678;
+    padding: 8px 8px 7px;
+    line-height: 18px;
+}
+
+.social_auth_disconnect label {
+    margin: 0 18px 0 5px;
+    vertical-align: baseline;
+    color: white;
+}
+
+.social_auth_disconnect a {
+    padding: 0 8px;
+    color: #345;
+    border: 1px solid #678;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.08);
+    box-shadow: 0 1px rgba(0,0,0,.21), 0 1px rgba(255,255,255,.21) inset;
+    -webkit-transition: 250ms;
+    float: right;
+}
+
+.social_auth_disconnect a:hover {
+    background-color: rgba(255,255,255,.21);
+    text-decoration: none;
+}

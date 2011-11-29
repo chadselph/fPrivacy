@@ -52,7 +52,7 @@
       reload_page(permissions);
     }
     
-     function restore_perm() {
+     function restore_last_perm() {
       var deleted_perm = sessionStorage.getItem("deleted_facebook_perm");
       sessionStorage.removeItem("deleted_facebook_perm")
 
@@ -67,45 +67,42 @@
         * Or just use jQuery.
         */
         var html = "",
-            deleted_perm,
-            saved_perms,
-            body = document.body,
-            frag = document.createDocumentFragment();
+            restore_last,
+            restore_all,
+            frag = document.createDocumentFragment(),
+            holder = document.createElement('div');
+
+        holder.className = "social_auth_disconnect";
             
         permissions.forEach(function (perm) {
-          html += '<input type=checkbox value='+perm+' checked />'+perm;
+          holder.insertAdjacentHTML('beforeEnd', '<input type=checkbox value='+perm+' id='+perm+' checked /><label for='+perm+'>'+perm+'</label>');
         });
         
-        settings_link = '<div><a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a></div>';
-        
-        function appendLink(elem) {
-          elem.setAttribute("href", "javascript:");
-          frag.appendChild(document.createElement("br"))
-          frag.appendChild(elem);
-        }
-
-        deleted_perm = sessionStorage.getItem("deleted_facebook_perm");
-        if (deleted_perm) {
-          var del_a = document.createElement("a");
+        // Add restore last removed perm link, if it exists
+        restore_last = sessionStorage.getItem("deleted_facebook_perm");
+        if (restore_last) {
+          var restore_last_elem = document.createElement("button");
           
-          del_a.addEventListener("click", restore_perm);
-          del_a.textContent = "Restore Last Change";
-          appendLink(del_a);
+          restore_last_elem.addEventListener("click", restore_last_perm);
+          restore_last_elem.textContent = "Restore Last Change";
+          frag.appendChild(restore_last_elem);
         }
         
-        saved_perms = sessionStorage.getItem(url_params.app_id);
-        if (saved_perms) {
-          var saved_a = document.createElement("a");
+        restore_all = sessionStorage.getItem(url_params.app_id);
+        if (restore_all) {
+          var restore_all_elem = document.createElement("button");
           
-          saved_a.addEventListener("click", restore_all_perms);
-          saved_a.innerHTML = "<b>Restore All Changes </b>";
-          appendLink(saved_a);
+          restore_all_elem.addEventListener("click", restore_all_perms);
+          restore_all_elem.innerHTML = "<b>Restore All Changes </b>";
+          frag.appendChild(restore_all_elem);
         }
-                
+        
+        holder.appendChild(frag);
+        
+        holder.insertAdjacentHTML('beforeEnd', '<a target="_new" href="https://www.facebook.com/settings?tab=applications">Application Settings</a>');
+        
         // put it in the pizza!
-        body.insertAdjacentHTML("afterBegin", settings_link);
-        body.insertAdjacentHTML("afterBegin", html);
-        body.getElementsByTagName("div")[0].appendChild(frag);
+        document.body.insertBefore(holder, document.body.firstChild);
     }
     
     (function init_header() {
