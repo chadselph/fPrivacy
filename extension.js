@@ -51,7 +51,7 @@
         */
         
         var holder = document.createElement('div');
-        holder.className = "SocialAuthDisconnect";
+        holder.className = "fPrivacyHeader";
         holder.innerHTML = "";
         
         var permissions = get_active_permissions();

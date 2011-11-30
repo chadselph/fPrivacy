@@ -1,10 +1,10 @@
-OOptOut Chrome Extension
+fPrivacy Chrome Extension
 ========================
 
 What does it do?
 -----------
 
-OOptOut lets you opt out of Facebook permissions when the authorization dialog is popped.
+fPrivacy lets you opt out of Facebook permissions when the authorization dialog is popped.
 
 Suppose you want to try out a sketchy app without handing over all of your data.
 ![](http://github.com/chadselph/OOptOut-Chrome-Extension/raw/master/screenshots/too%20many.png)

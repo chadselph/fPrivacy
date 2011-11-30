@@ -1,4 +1,4 @@
-.SocialAuthDisconnect {
+.fPrivacyHeader {
     padding: 8px 8px 7px;
     color: white;
     line-height: 18px;
@@ -8,13 +8,13 @@
     position: relative;
 }
 
-.SocialAuthDisconnect label {
+.fPrivacyHeader label {
     margin: 0 21px 0 3px;
     color: white !important;
     vertical-align: baseline !important;
 }
 
-.SocialAuthDisconnect a {
+.fPrivacyHeader a {
     padding: 0 8px;
     color: #345 !important;
     border: 1px solid #678;
@@ -25,7 +25,7 @@
     -webkit-transition: 250ms;
 }
 
-.SocialAuthDisconnect a:hover {
+.fPrivacyHeader a:hover {
     text-decoration: none;
     background-color: rgba(255,255,255,.21);
 }

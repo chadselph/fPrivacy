@@ -1,6 +1,6 @@
 {
-    "name": "Social Auth Disconnect",
-    "version": "0.1",
+    "name": "fPrivacy",
+    "version": "0.2.1",
     "description": "Makes Facebook permissions optional.",
     "permissions": [
 		"https://www.facebook.com"
@@ -9,5 +9,10 @@
         "matches": ["https://www.facebook.com/dialog/permissions.request*"],
         "js": ["extension.js"],
         "css": ["style.css"]
-    }]
+    }],
+    "icons": {
+        "16": "icons/icon16.png",
+        "48":  "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
 }
