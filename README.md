@@ -22,9 +22,11 @@ Phew! I feel much safer now.
 How Can I Use it?
 -----------------
 
-Hopefully soon-ish it will be on the Chrome web store and Safari extensions listing, but for now:
-
 __Chrome__
+
+[From the Web Store](https://chrome.google.com/webstore/detail/lkllliihmodekgjcioihaaodkbpeleph)
+
+or from git
 
 *  Do a git clone of this repository
 *  Open up chrome to chrome://extensions
@@ -51,10 +53,9 @@ __Safari__
 
 What needs to be done?
 ----------------------
-*  Logo, finding a better name. Help wanted!
 *  (Maybe) descriptions of what each permission does.
 *  (Maybe) ability to add permissions the site isn't acually asking for.
-*  Package up in Chrome and Safari extensions.  Basically I'm waiting on the name and logo stuff before I submit it.
+*  Makefile to package up in different browser extension formats
 
 Why do some sites break when using this plugin?
 ----------------------------------------------
