@@ -7,7 +7,7 @@
     ],
     "content_scripts": [{
         "matches": ["https://www.facebook.com/dialog/permissions.request*"],
-        "js": ["extension.js"],
+        "js": ["jquery.js", "extension.js"],
         "css": ["style.css"]
     }],
     "icons": {
