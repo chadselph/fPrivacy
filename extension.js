@@ -51,6 +51,7 @@
         */
         
         var holder = document.createElement('div');
+        holder.role = "toolbar";
         holder.className = "fPrivacyHeader";
         holder.innerHTML = "";
         
