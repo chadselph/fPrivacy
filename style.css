@@ -6,15 +6,40 @@
     background: -webkit-linear-gradient(#89a, #567);
     box-shadow: 0 1px #345, 0 2px rgba(255,255,255,.34), 0 0 0 1px #567;
     position: relative;
+	z-index: 10000;
+	min-height: 42px;
+	box-sizing: border-box;
+	overflow: auto;
 }
 
-.fPrivacyHeader label {
+#blueBar {
+	top: 42px !important;
+	position: relative !important;
+}
+
+#globalContainer {
+	padding-top: 42px !important;
+}
+
+.fPrivacyHeader label, .fPrivacyHeader span {
     margin: 0 21px 0 3px;
     color: white !important;
     vertical-align: baseline !important;
+	font-weight: bold;
+
+}
+
+.fPrivacyHeader div {
+	display: inline-block;
+	float: left;
+}
+
+.fPrivacyHeader input {
+	vertical-align: baseline;
 }
 
 .fPrivacyHeader a {
+	margin-bottom: 1px;
     padding: 0 8px;
     color: #345 !important;
     border: 1px solid #678;

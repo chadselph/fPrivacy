@@ -6,7 +6,7 @@
 		"https://www.facebook.com"
     ],
     "content_scripts": [{
-        "matches": ["https://www.facebook.com/dialog/permissions.request*"],
+        "matches": ["*://*.facebook.com/dialog/permissions.request*","*://*.facebook.com/connect/uiserver*","*://*.facebook.com/dialog/oauth*"],
         "js": ["extension.js"],
         "css": ["style.css"]
     }],
