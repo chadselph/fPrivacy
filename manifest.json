@@ -1,9 +1,9 @@
 {
     "name": "fPrivacy",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "description": "Makes Facebook permissions optional.",
     "permissions": [
-		"https://www.facebook.com"
+        "https://www.facebook.com"
     ],
     "content_scripts": [{
         "matches": ["*://*.facebook.com/dialog/permissions.request*","*://*.facebook.com/connect/uiserver*","*://*.facebook.com/dialog/oauth*"],
